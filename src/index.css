@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 14% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 14% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 14% 11%;
+
+    --primary: 220 91% 56%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 220 91% 70%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 14% 11%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 14% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 91% 56%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+
+    --wine: 340 55% 45%;
+    --wine-light: 340 60% 65%;
+    --nature: 142 76% 36%;
+    --nature-light: 142 71% 45%;
+
+    /* Modern travel app colors */
+    --orange: 24 97% 64%;
+    --orange-light: 24 95% 75%;
+    --blue: 220 91% 56%;
+    --blue-light: 220 91% 70%;
+    --gray-50: 220 14% 98%;
+    --gray-100: 220 14% 96%;
+    --gray-200: 220 13% 91%;
+    --gray-300: 220 14% 83%;
+    --gray-400: 220 9% 46%;
+    --gray-500: 220 9% 34%;
+    --gray-600: 220 14% 25%;
+    --gray-700: 220 14% 18%;
+    --gray-800: 220 14% 11%;
+    --gray-900: 220 14% 8%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--blue)), hsl(var(--blue-light)));
+    --gradient-nature: linear-gradient(135deg, hsl(var(--nature)), hsl(var(--nature-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--orange)), hsl(var(--orange-light)));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(var(--gray-50)));
+    --gradient-orange: linear-gradient(135deg, hsl(var(--orange)), hsl(var(--orange-light)));
+
+    /* Modern shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 10px 10px -5px hsl(0 0% 0% / 0.04);
+
+    /* Legacy shadows for compatibility */
+    --shadow-wine: var(--shadow-md);
+    --shadow-nature: var(--shadow-md);
+    --shadow-elegant: var(--shadow-lg);
+
+    --border: 340 15% 88%;
+    --input: 340 15% 88%;
+    --ring: 340 55% 45%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 340 15% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 340 15% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 340 15% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 340 60% 65%;
+    --primary-foreground: 340 15% 8%;
+    --primary-glow: 340 55% 45%;
+
+    --secondary: 120 35% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 340 15% 15%;
+    --muted-foreground: 340 8% 65%;
+
+    --accent: 45 85% 75%;
+    --accent-foreground: 340 15% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --wine: 340 60% 65%;
+    --wine-light: 340 65% 75%;
+    --nature: 120 35% 25%;
+    --nature-light: 120 45% 35%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(var(--wine)), hsl(var(--wine-light)));
+    --gradient-nature: linear-gradient(135deg, hsl(var(--nature)), hsl(var(--nature-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--wine)), hsl(var(--nature)));
+    --gradient-card: linear-gradient(145deg, hsl(340 15% 12% / 0.8), hsl(340 15% 15% / 0.4));
+
+    --border: 340 15% 20%;
+    --input: 340 15% 20%;
+    --ring: 340 60% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
